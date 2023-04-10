@@ -25,4 +25,6 @@ This datapack is incapable of handling backslashes or double quotes. Backslashes
 
 String concatenation has a character limit for the result string at around 2700 characters (in the resolved string, every character takes 12 characters, and the first takes 24). You could increase this if you concatenate certain length ranges of characters into strings separately, then concatenate the groups as a whole.
 
+# Applications
 
+The main thing that this adds is a way to generate and run commands dynamically. While that might seem like a tiny thing, it's actually huge. You can now do floating-point and long arithmetic, use a compound tag like a hashtable, generate selectors dynamically (which is a lot less clunky than selecting many entities and running functions on them to detect equality between fields), use lists with indexes (rather than by using them like a queue), give every entity separate arbitrary storage based on their UUID without requiring items to store it, etc. It is even possible to write something like a compiler from a custom language input by the user (perhaps in a written book) to command blocks.
