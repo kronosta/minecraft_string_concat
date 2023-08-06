@@ -4,7 +4,7 @@ This is a datapack that adds string concatenation into vanilla Minecraft, which 
 
 Make sure to run the function `kronosta_strconcat:setup` first, this forceloads a chunk for the concatenation to use. As of 1.17, forceload does not necessarily have an effect on the same tick it was executed in, so `kronosta_strconcat:concat` will automatically wait until the chunk is ready.
 
-In the storage `kronosta_strconcat:concat`, the `Input` field should be a compound tag containing a field called `ToConcat`. `ToConcat` should be an array of strings, which will be concatenated. The result will be in `Output.Result` inside of the storage `kronosta_strconcat:concat`. Note that, due to some nuances of command blocks that I haven't fully figured out, the result will take 6 ticks to be available (`schedule` commands are your friend when using this datapack). Currently this is a speed problem, since this datapack is currently only programmed to handle one string at once, but with a bit more programming, it absolutely could make multiple concatenations.
+In the storage `kronosta_strconcat:concat`, the `Input` field should be a compound tag containing a field called `ToConcat`. `ToConcat` should be an array of strings, which will be concatenated. The result will be in `Output.Result` inside of the storage `kronosta_strconcat:concat`. Note that, due to some nuances of command blocks that I haven't fully figured out, the result will take 6 ticks to be available (`schedule` commands are your friend when using this datapack). This is not a limitation of minecraft, just of this specific datapack (I think it could be done in one tick with chained command blocks, but I didn't do that because I really made this as a proof that it can be done).
 
 # How it works
 
